@@ -66,16 +66,20 @@ function returnAndShowSuggestion() {
   } else if ((cssTally > rubyTally) && (cssTally > cSharpTally)) {
     $(".suggestion-css").show();
   } else if ((rubyTally === cSharpTally) && (rubyTally === cssTally)) {
+    $(".multiple").show();
     $(".suggestion-css").show();
     $(".suggestion-ruby").show();
     $(".suggestion-c-sharp").show();
   } else if (rubyTally === cSharpTally) {
+    $(".multiple").show();
     $(".suggestion-ruby").show();
     $(".suggestion-c-sharp").show();
   } else if (rubyTally === cssTally) {
+    $(".multiple").show();
     $(".suggestion-css").show();
     $(".suggestion-ruby").show();
   } else if (cSharpTally === cssTally) {
+    $(".multiple").show();
     $(".suggestion-css").show();
     $(".suggestion-c-sharp").show();
   } else {alert("Something went wrong with the returnAndShowSuggestion fucntion")}
