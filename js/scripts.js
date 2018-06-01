@@ -1,12 +1,12 @@
 function countRuby() {
   var rubyTally = 0;
-  var questions = $(".radio"); 
+  var questions = $(".radio");
 
-  // loop through question1 answers and return value of checked answer
+  // loop through questions and return value of checked answer
   for (i = 1; i < questions.length + 1; ++i) {
     questionNumber = "question" + i;
     //
-    test = $("input[name=question1]:checked", "#quiz").val();
+    test = $("input[name=" + questionNumber + "]:checked").val();
     console.log(test);
   };
 }
