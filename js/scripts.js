@@ -53,27 +53,32 @@ function tally() {
   return tallies;
 }
 
-function returnSuggestion() {
+function returnAndShowSuggestion() {
   tallies = tally();
   console.log(tallies);
   var rubyTally = tallies[0];
   var cSharpTally = tallies[1];
   var cssTally = tallies[2];
   if ((rubyTally > cSharpTally) && (rubyTally > cssTally)) {
-    return "ruby"
+    $(".suggestion-ruby").show();
   } else if ((cSharpTally > rubyTally) && (cSharpTally > cssTally)) {
-    return "c-sharp"
+    $(".suggestion-c-sharp").show();
   } else if ((cssTally > rubyTally) && (cssTally > cSharpTally)) {
-    return "css"
+    $(".suggestion-css").show();
   } else if ((rubyTally === cSharpTally) && (rubyTally === cssTally)) {
-    return "all"
+    $(".suggestion-css").show();
+    $(".suggestion-ruby").show();
+    $(".suggestion-c-sharp").show();
   } else if (rubyTally === cSharpTally) {
-    return "ruby and c-sharp"
+    $(".suggestion-ruby").show();
+    $(".suggestion-c-sharp").show();
   } else if (rubyTally === cssTally) {
-    return "ruby and css"
+    $(".suggestion-css").show();
+    $(".suggestion-ruby").show();
   } else if (cSharpTally === cssTally) {
-    return "s-sharp and css"
-  } else {alert("Something went wrong with the returnSuggestion fucntion")}
+    $(".suggestion-css").show();
+    $(".suggestion-c-sharp").show();
+  } else {alert("Something went wrong with the returnAndShowSuggestion fucntion")}
 }
 
 
@@ -89,8 +94,6 @@ $(document).ready(function(){
 
     // also on Submit, 1) hide quiz and 2) show relevant suggestion
     $(".quiz").hide();
-    // var suggestion = returnSuggestion();
-    countChecked();
-    // console.log(suggestion);
+    returnAndShowSuggestion();
   });
 });
