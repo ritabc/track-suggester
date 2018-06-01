@@ -5,3 +5,22 @@ label {
 .suggestions > div {
   display: none;
 }
+
+.panel-body {
+  height: 325px;
+}
+
+.panel-body img:first-child {
+  margin: auto 0px auto 20%;
+}
+
+.panel-body img:last-child {
+  margin: auto 20% auto 0;
+}
+
+.panel-body > img {
+  display: inline;
+  float: left;
+  text-align: center;
+  max-width: 30%;
+}
