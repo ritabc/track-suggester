@@ -24,7 +24,7 @@ Take a quiz to see which Epicodus track to embark on.
 * Bootstrap
 
 ## Links
-
+[Here](https://github.com/ritabc/track-suggester) is a link to the public repository.
 
 ## License
 
