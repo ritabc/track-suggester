@@ -1,9 +1,32 @@
+NUMBER_OF_QUESTIONS = 6
+
+function disableSubmit () {
+  $("#submit").prop("disabled", "true");
+}
+
+function enableSubmit() {
+  $("#submit").removeAttr("disabled");
+}
+
+function validateInput() {
+  var count = countChecked();
+  if (count === NUMBER_OF_QUESTIONS) {
+    enableSubmit();
+  }
+}
+
+// write function to count how many answers are checked
+function countChecked() {
+  var answerCount = $("input[name^=question]:checked").length
+  return answerCount;
+}
+
 function tally() {
+  var questions = $(".radio");
   var rubyTally = 0;
   var cSharpTally = 0;
   var cssTally = 0;
   var tallies = [];
-  var questions = $(".radio");
 
   // loop through questions and log value of checked answer
   for (i = 1; i < questions.length + 1; ++i) {
@@ -53,23 +76,14 @@ function returnSuggestion() {
   } else {alert("Something went wrong with the returnSuggestion fucntion")}
 }
 
-// write function to count how many answers are checked
-function countChecked() {
-  // console.log("Reached");
-  // var count = 0;
-  // var questions = $(".radio");
-  // for (i = 0; i < questions.length; ++i) {
-    // var questionNumber = "question" + i;
-  var lengthVar = $("input[name^=question]:checked").length
-  console.log(lengthVar)
-    // if ($("input[name=" + questionNumber + "]:checked").length === 6 {
-    //   ++count;
-    //   console.log(count)
-    // }
-  // }
-}
 
 $(document).ready(function(){
+  disableSubmit();
+
+  $("label").click(function() {
+    validateInput();
+  });
+
   $("#submit").click(function(e){
     e.preventDefault()
 
