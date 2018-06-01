@@ -53,7 +53,7 @@ function tally() {
   return tallies;
 }
 
-function returnAndShowSuggestion() {
+function ShowSuggestion() {
   tallies = tally();
   console.log(tallies);
   var rubyTally = tallies[0];
@@ -82,7 +82,7 @@ function returnAndShowSuggestion() {
     $(".multiple").show();
     $(".suggestion-css").show();
     $(".suggestion-c-sharp").show();
-  } else {alert("Something went wrong with the returnAndShowSuggestion fucntion")}
+  } else {alert("Something went wrong with the ShowSuggestion fucntion")}
 }
 
 
@@ -96,8 +96,8 @@ $(document).ready(function(){
   $("#submit").click(function(e){
     e.preventDefault()
 
-    // also on Submit, 1) hide quiz and 2) show relevant suggestion
+    // also on Submit, hide quiz and show relevant suggestion
     $(".quiz").hide();
-    returnAndShowSuggestion();
+    ShowSuggestion();
   });
 });
