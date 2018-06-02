@@ -11,20 +11,12 @@ label {
 }
 
 .suggestions .panel-body {
-  max-height: 325px;
   padding: 0;
 }
 
-/* .img-div img:first-child {
-  margin: 0 0 0 20%;
-}
-
-.img-div img:last-child {
-margin: 0 20% 0 0;
-} */
-
 .img-div {
-  padding: 30px;
+  max-height: 325px;
+  margin: 30px;
 }
 
 .img-div > img {
