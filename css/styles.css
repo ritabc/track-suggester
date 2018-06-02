@@ -6,25 +6,28 @@ label {
   display: none;
 }
 
-.panel-body {
-  height: 325px;
+.suggestions .suggestion * {
+  text-align: center;
+}
+
+.suggestions .panel-body {
+  max-height: 325px;
+  padding: 0;
 }
 
 .panel-body img:first-child {
-  margin: auto 0px auto 20%;
+  margin: 0 0 0 20%;
 }
 
 .panel-body img:last-child {
-  margin: auto 20% auto 0;
+margin: 0 20% 0 0;
 }
 
 .panel-body > img {
+  max-height: 325px;
   display: inline;
   float: left;
   text-align: center;
   max-width: 30%;
-}
-
-.panel-title * {
-  text-align: center;
+  padding: 15px;
 }
