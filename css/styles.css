@@ -15,18 +15,22 @@ label {
   padding: 0;
 }
 
-.panel-body img:first-child {
+/* .img-div img:first-child {
   margin: 0 0 0 20%;
 }
 
-.panel-body img:last-child {
+.img-div img:last-child {
 margin: 0 20% 0 0;
+} */
+
+.img-div {
+  padding: 30px;
 }
 
-.panel-body > img {
+.img-div > img {
+  margin: auto;
   max-height: 325px;
   display: inline;
-  float: left;
   text-align: center;
   max-width: 30%;
   padding: 15px;
